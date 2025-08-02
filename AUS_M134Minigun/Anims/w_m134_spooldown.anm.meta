@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{B8B51A414ACA1D72}Assets/Weapons/HeavyWeapons/AUS_M134Minigun/Anims/w_m134_spooldown.anm"
+ Configurations {
+  TXAResourceClass PC {
+  }
+  TXAResourceClass XBOX_ONE : PC {
+  }
+  TXAResourceClass XBOX_SERIES : PC {
+  }
+  TXAResourceClass PS4 : PC {
+  }
+  TXAResourceClass PS5 : PC {
+  }
+  TXAResourceClass HEADLESS : PC {
+  }
+ }
+}

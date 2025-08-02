@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{9AFD451A65E94401}Assets/Weapons/HeavyWeapons/AUS_M134Minigun/Anims/w_m134_spoolup.anm"
+ Configurations {
+  TXAResourceClass PC {
+  }
+  TXAResourceClass XBOX_ONE : PC {
+  }
+  TXAResourceClass XBOX_SERIES : PC {
+  }
+  TXAResourceClass PS4 : PC {
+  }
+  TXAResourceClass PS5 : PC {
+  }
+  TXAResourceClass HEADLESS : PC {
+  }
+ }
+}
