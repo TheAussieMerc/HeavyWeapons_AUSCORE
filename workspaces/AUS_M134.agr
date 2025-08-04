@@ -22,6 +22,9 @@ AnimSrcGraph {
    AnimSrcGCTVarInt SpinState {
     MaxValue 3
    }
+   AnimSrcGCTVarFloat BarrelSpinSpeed {
+    MaxValue 1
+   }
   }
   Commands {
    AnimSrcGCTCmd CMD_Locomotion_Turn {
