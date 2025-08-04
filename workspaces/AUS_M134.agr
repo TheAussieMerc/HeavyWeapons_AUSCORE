@@ -13,11 +13,14 @@ AnimSrcGraph {
    AnimSrcGCTVarFloat WeaponHeight {
     MaxValue 120
    }
-   AnimSrcGCTVarBool Firing {
-   }
    AnimSrcGCTVarBool VehicleFireReleased {
    }
    AnimSrcGCTVarBool Empty {
+   }
+   AnimSrcGCTVarBool Firing {
+   }
+   AnimSrcGCTVarInt SpinState {
+    MaxValue 3
    }
   }
   Commands {

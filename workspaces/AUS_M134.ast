@@ -5,9 +5,6 @@ AnimSetTemplateSource {
    Animations {
     "Aimspace"
     "Fire"
-    "Fire_Start"
-    "Fire_Stop"
-    "Idle"
     "Turn_Aimspace_High"
     "Turn_Aimspace_Low"
     "Turn_Aimspace_Mid"

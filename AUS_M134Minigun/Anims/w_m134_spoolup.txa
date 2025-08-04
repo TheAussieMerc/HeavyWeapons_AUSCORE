@@ -54,8 +54,15 @@ $animation "" {
   }
  }
  $events {
-  #event 0 "SOUND_M134_START" "AnimSrcEventGeneric \"{6604E54BFA071222}\" {
+  #event 0 "SOUND_M134_START" "AnimSrcEventGeneric \"{6604F092BC255818}\" {
  Name \"SOUND_M134_START\"
+ Comment \"\"
+ MainPathOnly 0
+ UserString \"\"
+ UserInt -1
+}" 0 0 "" 0
+  #event 7 "FIRE_START_COMPLETE" "AnimSrcEventGeneric \"{6604F092BC2558EA}\" {
+ Name \"FIRE_START_COMPLETE\"
  Comment \"\"
  MainPathOnly 0
  UserString \"\"

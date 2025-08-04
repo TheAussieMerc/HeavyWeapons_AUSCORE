@@ -267,34 +267,45 @@ AnimSrcGraphFile {
     AnimSrcNodeStateMachine WeaponMasterControl {
      EditorPos 388.9 108.3
      states {
-      AnimSrcNodeState WeaponState {
-       EditorPos 388.8 109.7
-       Child "Queue 21406"
+      AnimSrcNodeState IDLE {
+       EditorPos 384.6 110.1
+       Child "IDLE_Source"
+      }
+      AnimSrcNodeState FIRE_START {
+       EditorPos 387.3 110.1
+       Child "FIRE_START_Source"
+      }
+      AnimSrcNodeState FIRE_LOOP {
+       EditorPos 390 110.1
+       Child "FIRE_LOOP_Source"
+      }
+      AnimSrcNodeState FIRE_STOP {
+       EditorPos 392.7 110.1
+       Child "FIRE_STOP_Source"
       }
      }
-    }
-    AnimSrcNodeQueue "Queue 21406" {
-     EditorPos 388.8 111.3
-     Child "Pose 42736"
-     QueueItems {
-      AnimSrcNodeQueueItem "{617CCAB7559FA7F2}" {
-       Child "Source 40572"
-       StartExpr "Firing"
-       InterruptExpr ""
-       BlendInTime 0
-       BlendOutTime 0
-       EnqueueMethod InterruptOther
+     transitions {
+      AnimSrcNodeTransition "{6604F090EC79FA16}" {
+       FromState "IDLE"
+       ToState "FIRE_START"
+       Condition "State == 1"
+      }
+      AnimSrcNodeTransition "{6604F0909371B3B3}" {
+       FromState "FIRE_START"
+       ToState "FIRE_LOOP"
+       Condition "State == 2"
+      }
+      AnimSrcNodeTransition "{6604F090837B566E}" {
+       FromState "FIRE_LOOP"
+       ToState "FIRE_STOP"
+       Condition "State == 3"
+      }
+      AnimSrcNodeTransition "{6604F090B3C67DA5}" {
+       FromState "FIRE_STOP"
+       ToState "IDLE"
+       Condition "State == 0"
       }
      }
-    }
-    AnimSrcNodePose "Pose 42736" {
-     EditorPos 387.1 112.9
-     Source "Gunner.Ground.Fire"
-     Time "0.0"
-    }
-    AnimSrcNodeSource "Source 40572" {
-     EditorPos 390.5 113
-     Source "Gunner.Ground.Fire"
     }
    }
   }

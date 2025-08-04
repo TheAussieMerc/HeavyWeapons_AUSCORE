@@ -243,8 +243,15 @@ $animation "" {
   }
  }
  $events {
-  #event 0 "SOUND_M134_STOP" "AnimSrcEventGeneric \"{6604E54BE80CBE0C}\" {
+  #event 0 "SOUND_M134_STOP" "AnimSrcEventGeneric \"{6604F092A92938ED}\" {
  Name \"SOUND_M134_STOP\"
+ Comment \"\"
+ MainPathOnly 0
+ UserString \"\"
+ UserInt -1
+}" 0 0 "" 0
+  #event 137 "FIRE_STOP_COMPLETE" "AnimSrcEventGeneric \"{6604F092A9293B5F}\" {
+ Name \"FIRE_STOP_COMPLETE\"
  Comment \"\"
  MainPathOnly 0
  UserString \"\"
