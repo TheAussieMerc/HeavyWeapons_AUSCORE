@@ -1,11 +1,6 @@
 AnimSetInstanceSource "{617CCAB755A0F3DD}" {
  Template "{2D99E5F577A508A1}Assets/Weapons/HeavyWeapons/workspaces/AUS_M134.ast"
  PreviewModel "{3B55266522CA33E3}Assets/Weapons/HeavyWeapons/AUS_M134Minigun/AUS_GAU-17_Minigun.xob"
- Lines {
-  AnimSetInstanceSource_Line "Gunner.Ground.Fire" {
-   Resource "{2A527B5D1BE8B23E}Assets/Weapons/HeavyWeapons/AUS_M134Minigun/Anims/w_m134_fire.anm"
-  }
- }
  RBF AnimSetInstanceSourceRBFArray "{617CCAB75590517A}" {
  }
 }

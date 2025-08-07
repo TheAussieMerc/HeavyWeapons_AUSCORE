@@ -264,46 +264,40 @@ AnimSrcGraphFile {
      }
      Version 1
     }
-    AnimSrcNodeStateMachine WeaponMasterControl {
-     EditorPos 388.9 108.3
-     states {
-      AnimSrcNodeState IDLE {
-       EditorPos 384.6 110.1
-       Child "IDLE_Source"
-      }
-      AnimSrcNodeState FIRE_START {
-       EditorPos 387.3 110.1
-       Child "FIRE_START_Source"
-      }
-      AnimSrcNodeState FIRE_LOOP {
-       EditorPos 390 110.1
-       Child "FIRE_LOOP_Source"
-      }
-      AnimSrcNodeState FIRE_STOP {
-       EditorPos 392.7 110.1
-       Child "FIRE_STOP_Source"
+   }
+  }
+  AnimSrcGraphSheet M134_Weapon {
+   Nodes {
+    AnimSrcNodeProcTransform Proc_Barrel_rot {
+     EditorPos 393.5 116.7
+     Child "Barrel_Rotation_Base"
+     Expression "-1"
+     Bones {
+      AnimSrcNodeProcTrBoneItem "{6608D302F29978DC}" {
+       Bone "w_barrel"
+       Axis Z
+       Op Rotate
+       Amount "(BarrelSpinSpeed * BarrelSpinSpeed) * 1750 * GetLowerTime()"
       }
      }
-     transitions {
-      AnimSrcNodeTransition "{6604F090EC79FA16}" {
-       FromState "IDLE"
-       ToState "FIRE_START"
-       Condition "State == 1"
-      }
-      AnimSrcNodeTransition "{6604F0909371B3B3}" {
-       FromState "FIRE_START"
-       ToState "FIRE_LOOP"
-       Condition "State == 2"
-      }
-      AnimSrcNodeTransition "{6604F090837B566E}" {
-       FromState "FIRE_LOOP"
-       ToState "FIRE_STOP"
-       Condition "State == 3"
-      }
-      AnimSrcNodeTransition "{6604F090B3C67DA5}" {
-       FromState "FIRE_STOP"
-       ToState "IDLE"
-       Condition "State == 0"
+    }
+    AnimSrcNodeBindPose Barrel_Rotation_Base {
+     EditorPos 393.477 118.203
+     BoneMask "M134_Barrel"
+    }
+    AnimSrcNodeSleep eco_barrel_idle {
+     EditorPos 393.477 115.203
+     Child "BarrelSpinSpeed delay"
+     AwakeExpr "SpinState > 0"
+    }
+    AnimSrcNodeVarUpdate "BarrelSpinSpeed delay" {
+     EditorPos 390.5 116.1
+     Child "Proc_Barrel_rot"
+     Varupdate {
+      AnimSrcNodeVarUpdateItem "{660C570282519C6A}" {
+       VariableName "BarrelSpinSpeed"
+       UpdateOnMainPath 1
+       MaxDifferencePerSecond 0.7
       }
      }
     }

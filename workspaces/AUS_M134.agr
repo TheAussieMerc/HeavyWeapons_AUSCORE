@@ -54,6 +54,14 @@ AnimSrcGraph {
     ChainAxis "-y"
    }
   }
+  BoneMasks {
+   AnimSrcGCTBoneMask M134_Barrel {
+    Bones {
+     "w_root"
+     "w_barrel"
+    }
+   }
+  }
   GlobalTags {
    "WEAPON"
    "TURRET"
